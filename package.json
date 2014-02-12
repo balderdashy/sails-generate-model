@@ -1,7 +1,7 @@
 {
   "name": "sails-generate-model",
   "version": "0.10.5",
-  "description": "Generate a model for Sails.",
+  "description": "Generate a model for a Sails app.",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha"
@@ -25,12 +25,10 @@
     "reportback": "*",
     "fs-extra": "*"
   },
-  "sails": {
-    "generator": {
-      "name": "model",
-      "behavior": "overrides `sails generate model`",
-      "sailsVersion": "~0.10.0",
-      "main": "lib/index"
-    }
+  "sailsGenerator": {
+    "name": "model",
+    "behavior": "overrides `sails generate model`",
+    "sailsVersion": "~0.10.0",
+    "main": "lib/index"
   }
 }
