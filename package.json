@@ -26,9 +26,8 @@
     "fs-extra": "*"
   },
   "sailsGenerator": {
-    "name": "model",
+    "type": "model",
     "behavior": "overrides `sails generate model`",
-    "sailsVersion": "~0.10.0",
-    "main": "lib/index"
+    "sailsVersion": "~0.10.0"
   }
 }
