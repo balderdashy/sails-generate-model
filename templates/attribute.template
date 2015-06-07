@@ -10,5 +10,5 @@
 %>
 <%if (lang === 'js') {%>    <%= name %> : { type: '<%= type %>' }
 <%} else if (lang === 'coffee'){ %>    <%=name%>:
-      type: '<%= type %>'
+    type: '<%= type %>'
 <%}%>
