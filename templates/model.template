@@ -1,4 +1,5 @@
-<%/**
+<%
+/**
  * Boilerplate model
  *
  * This is the template used when generating models via the CLI
@@ -8,23 +9,92 @@
 %><% if (lang === 'js') { %>/**
  * <%= filename %>
  *
- * @description :: TODO: You might write a short summary of how this model works and what it represents here.
- * @docs        :: http://sailsjs.org/#!/documentation/concepts/ORM/Models.html
+ * @docs http://sailsjs.org/#!/documentation/concepts/ORM/Models.html
  */
-
 module.exports = {
+  // Toggle the automatic definition of a createdAt attribute.
+  // autoCreatedAt: false,
 
-  attributes: {
+  // Toggle the automatic definition of a updatedAt attribute.
+  // autoUpdatedAt: false,
+
+  // Toggle the automatic definition of a primary key. If you turn it off, make
+  // sure you define some attribute as your PK.
+  // autoPK: false,
+
+  // The lowercase unique key for this model, e.g. user.
+  // identity: 'customidentityhere',
+
+  // The global name by which you can access your model (if the globalization of
+  // models is enabled).
+  // globalId: 'CustomGlobalId',
+
+  // Controls whether/how Sails will attempt to automatically rebuild the
+  // tables/collections/sets/etc. in your schema.
+  // Possible values:
+  // - safe: never auto-migrate my database(s). I will do it myself (by hand)
+  // - alter: auto-migrate, but attempt to keep my existing data (experimental)
+  // - drop: wipe/drop ALL my data and rebuild models every time I lift Sails
+  // migrate: 'safe',
+
+  // A flag to toggle schemaless or schema mode in databases that support
+  // schemaless data structures.
+  // schema: true,
+
+  // Define which connection queries will be run on.
+  // connection: 'specify-a-connection-here',
+
+  // Define a custom table name to be used by model queries. Useful to work with
+  // legacy databases.
+  // tableName: 'custom_table_name_here',
+
+  // The most important configuration: your model attributes.
+<% if (attributes.length > 0) { %>  attributes: {
 <%= attributes %>
-  }
+  }<% } else { %>  attributes: {}<% } %>
 };
-<%} else if (lang === 'coffee'){ %> # <%= filename %>
+<%} else if (lang === 'coffee') { %>
+ # <%= filename %>
  #
- # @description :: TODO: You might write a short summary of how this model works and what it represents here.
- # @docs        :: http://sailsjs.org/#!/documentation/concepts/ORM/Models.html
-
+ # @docs http://sailsjs.org/#!/documentation/concepts/ORM/Models.html
 module.exports =
+  # Toggle the automatic definition of a createdAt attribute.
+  # autoCreatedAt: false
 
-<%if (attributes.length > 0){%>  attributes:
-  <%= attributes %>
-<%} else{ %>  attributes: {}<%}%><%}%>
+  # toggle the automatic definition of a updatedAt attribute.
+  # autoUpdatedAt: false
+
+  # Toggle the automatic definition of a primary key. If you turn it off, make
+  # sure you define some attribute as your PK.
+  # autoPK: false
+
+  # The lowercase unique key for this model, e.g. user.
+  # identity: 'customidentityhere'
+
+  # The global name by which you can access your model (if the globalization of
+  # models is enabled).
+  # globalId: 'CustomGlobalId'
+
+  # Controls whether/how Sails will attempt to automatically rebuild the
+  # tables/collections/sets/etc. in your schema.
+  # Possible values:
+  # - safe: never auto-migrate my database(s). I will do it myself (by hand)
+  # - alter: auto-migrate, but attempt to keep my existing data (experimental)
+  # - drop: wipe/drop ALL my data and rebuild models every time I lift Sails
+  # migrate: 'safe'
+
+  # A flag to toggle schemaless or schema mode in databases that support
+  # schemaless data structures.
+  # schema: true
+
+  # Define which connection queries will be run on.
+  # connection: 'specify-a-connection-here'
+
+  # Define a custom table name to be used by model queries. Useful to work with
+  # legacy databases.
+  # tableName: 'custom_table_name_here'
+
+  # The most important configuration: your model attributes.
+<%if (attributes.length > 0) { %>  attributes:
+<%= attributes %>
+<%} else { %>  attributes: {}<% } %><% } %>
