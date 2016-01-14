@@ -7,8 +7,8 @@
  * e.g. `sails generate model foo attrName`
  *
  */
-%>
-<%if (lang === 'js') {%>    <%= name %> : { type: '<%= type %>' }
-<%} else if (lang === 'coffee'){ %>    <%=name%>:
-    type: '<%= type %>'
-<%}%>
+%><% if (lang === 'js') { %>    <%= name %>: {
+      type: '<%= type %>'
+    }<% } else if (lang === 'coffee') { %>
+    <%= name %>:
+      type: '<%= type %>'<% } %>
