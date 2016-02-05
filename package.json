@@ -16,7 +16,7 @@
   "author": "balderdashy",
   "license": "MIT",
   "dependencies": {
-    "lodash": ">=3.9.x",
+    "lodash": "~2.4.0",
     "merge-defaults": ">=0.1.0",
     "underscore.string": "~2.3.3"
   },
