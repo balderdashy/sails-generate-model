@@ -6,6 +6,10 @@
   "scripts": {
     "test": "mocha"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/balderdashy/sails-generate-model.git"
+  },
   "keywords": [
     "model",
     "generator",
